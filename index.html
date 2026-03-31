@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bart(ek) Gebka - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="projects.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ----------  COLOR PALETTE  ---------- */
+        :root {
+            --c0: #000000;
+            --c1: #444444;
+            --c2: #696969;
+            --c3: #edb926;
+            --c4: #f1d217;
+        }
+
+        /* ----------  RESET / BASICS  ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            color: var(--c4);
+            background: var(--c0);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ----------  NAVBAR  ---------- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--c3);
+        }
+
+        nav ul.nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav>ul>li>a {
+            padding: .5rem 0;
+            display: block;
+        }
+
+        nav ul.dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--c1);
+            padding: .5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: .25s ease;
+        }
+
+        nav li:hover ul.dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        nav ul.dropdown li a {
+            display: block;
+            padding: .4rem 1rem;
+            color: var(--c4);
+            white-space: nowrap;
+        }
+
+        nav ul.dropdown li a:hover {
+            background: var(--c2);
+        }
+
+        /* ----------  HERO  ---------- */
+        #hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .intro {
+            position: absolute;
+            top: 25%;
+            left: 0%;
+            transform: translate(0%, 0%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .intro-1 {
+            font-size: clamp(2rem, 4vw, 4rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: .2s;
+        }
+
+        .intro-2 {
+            font-size: clamp(2rem, 4vw, 4rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 1.4s;
+        }
+
+        .intro-3 {
+            font-size: clamp(1rem, 4vw, 2rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 2.6s;
+        }
+
+        .intro-bullet {
+            color: var(--c4);
+        }
+
+        .intro-4 {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 4.8s;
+            color: #FFFF00;
+        }
+
+        .intro-5 {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 5.8s;
+            color: #FF8800;
+        }
+
+        .intro-6 {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 6.8s;
+            color: #FF4400;
+        }
+
+        .intro-7 {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 7.8s;
+            color: #FF0000;
+        }
+
+        .intro-4 { color:#FFB3BA; }
+        .intro-5 { color:#BAE1FF; }
+        .intro-6 { color:#BAFFC9; }
+        .intro-7 { color:#FFFFBA; }
+
+        .intro-8 {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+            animation-delay: 8.2s;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-top: 2rem;
+            object-fit: cover;
+            border: 4px solid var(--c3);
+            opacity: 0;
+            animation: fadeSlide 1s forwards 8.0s;
+        }
+
+        /* ----------  SECTIONS  ---------- */
+        section.area {
+            padding: 6rem 8vw;
+            background: var(--c0);
+        }
+
+        section.area:nth-child(even) {
+            background: var(--c1);
+        }
+
+        section.area h2 {
+            font-size: 2.2rem;
+            color: var(--c3);
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--c2);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 20px rgba(237, 185, 38, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card .p-body {
+            padding: 1rem;
+        }
+
+        .card .p-body h3 {
+            color: var(--c4);
+            font-size: 1.25rem;
+            margin-bottom: .5rem;
+        }
+
+        .card .p-body p {
+            font-size: .9rem;
+            color: #eaeaea;
+        }
+
+        .more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--c3);
+            font-weight: 600;
+        }
+
+        .pill {
+            display: inline-block;
+            background: var(--c3);
+            color: var(--c0);
+            padding: .2rem .6rem;
+            border-radius: 4px;
+            font-size: .75rem;
+            margin-right: .3rem;
+            margin-top: .5rem;
+        }
+
+        /* ----------  FOOTER  ---------- */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--c2);
+            background: var(--c0);
+            font-size: .85rem;
+        }
+
+        /* ----------  ANIMATIONS  ---------- */
+        @keyframes fadeSlide {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* ----------  SCROLLBAR (nice touch) ---------- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--c0);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--c2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--c3);
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QT85V1PFLR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QT85V1PFLR');
+</script>
+<body>
+
+    <!-- ------------ NAV ------------ -->
+    <nav>
+        <div class="logo">BG</div>
+
+    </nav>
+
+    <!-- ------------ HERO ------------ -->
+    <header id="hero">
+        <div id="particles-js"></div>
+
+        <div class="intro">
+            <h1><span class="intro-1">Hi!</span><span class="intro-2">&nbsp;&nbsp;I'm Bartek</span></h1>
+            <h1 class="intro-3">A software engineer in Milwaukee specializing in</h1>
+            <h1>
+                <span class="intro-4"><a href="#ai">Artificial Intelligence</a></span>
+                <span class="intro-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#gpu">GPU Programming</a></span>
+                <span class="intro-6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#other">Computer Graphics</a></span>
+                <span class="intro-7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#other"> Full-Stack Development</a></span>
+            </h1>
+            <!-- <img src="https://media.licdn.com/dms/image/v2/C4E03AQGI8NLtyPQMQA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1633542511996?e=1756339200&v=beta&t=CMJVUoyeE24jwzS5o5HJ1pTJRGmZGBU1HAKU0-3Gsvg" alt="Bartek Gebka" class="avatar intro-6"> -->
+            <h1 class="intro-8"><br /> <br />Scroll down to see my work</h1>
+            <h1 class="intro-8">▼</h1>
+        </div>
+    </header>
+
+    <!-- ------------ MAIN CONTENT ------------ -->
+    <main>
+
+    </main>
+
+    <!-- ------------ FOOTER ------------ -->
+    <footer>
+    </footer>
+
+    <!-- ------------ JAVASCRIPT ------------ -->
+    <script>
+        particlesJS('hero', {
+            particles: {
+                number: { value: 240 },
+                color: { value: '#edb926' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2 },
+                size: { value: 3 },
+                line_linked: {
+                enable: true,
+                distance: 120,
+                color: '#696969',
+                opacity: 0.2,
+                width: 3
+                },
+                move: { enable: true, speed: 1 }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        "enable": false, // Disable hover interactions
+                        "mode": "grab"
+                    },
+                    onclick: {
+                        "enable": false, // Disable click interactions
+                        "mode": "push"
+                    },
+                },
+            },
+        })
+
+        const getSectionHTML = (sectionName) => {
+            return `
+            <section class="area" id="${sectionName.toLowerCase()}">
+                <h2>${sectionName}</h2>
+                <div class="project-grid">
+                    ${PROJECTS.filter(p => p.featured === sectionName).map(getProjectHTML).join('')}
+                </div>
+            </section>
+            `
+        }
+
+        const getProjectHTML = (project) => {
+            let pillHTML = ""
+            project.technologies.forEach(element => {
+                pillHTML += `<span class="pill">${element}</span>`
+            });
+            return `
+            <a class="card" href="${project.link}" target="_blank">
+                <img src="${project.image}" alt="">
+                <div class="p-body">
+                    <h3>${project.name}</h3>
+                    <p>${project.description}</p>
+                    <p>${pillHTML}</p>
+                </div>
+            </a>
+            `
+        }
+
+        window.onload = () => {
+            const allSectionsNames = PROJECTS.map(p => p.featured)
+            const uniqueSectionNames = [...new Set(allSectionsNames)].filter(s => s) // filter out nulls
+
+            uniqueSectionNames.forEach(sectionName => {
+                const sectionHTML = getSectionHTML(sectionName)
+                document.getElementsByTagName('main')[0].insertAdjacentHTML('beforeend', sectionHTML)
+            });
+
+            document.getElementsByTagName('footer')[0].innerText = `© ${new Date().getFullYear()} Bart Gebka. All rights reserved.`
+        }
+    </script>
+</body>
+
+</html>
