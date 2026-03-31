@@ -94,7 +94,7 @@ PROJECTS = [
     "category": "Unity Games + Projects",
     "description": "Drive around a planet picking up and delivering packages within a time limit.",
     "image": "images/planetary_delivery.png",
-    "link": "https://github.com/bart1259/TetraDefense",
+    "link": "https://github.com/bart1259/PlanetaryDelivery",
     "technologies": ["Unity", "C#"],
     "year": 2026,
     "featured": "Unity / Games"
@@ -104,7 +104,7 @@ PROJECTS = [
     "category": "Unity Games + Projects",
     "description": "Tower defense game where platforms and towers are shaped like tetris pieces.",
     "image": "images/tetra_defense.png",
-    "link": null,
+    "link": "https://github.com/bart1259/TetraDefense",
     "technologies": ["Unity", "C#"],
     "year": 2026,
     "featured": "Unity / Games"
@@ -114,7 +114,7 @@ PROJECTS = [
     "category": "Unity Games + Projects",
     "description": "Unity framework for creating planets made from hexagons",
     "image": "images/hex_planet.png",
-    "link": null,
+    "link": "https://github.com/bart1259/UnityHexPlanet",
     "technologies": ["Unity", "C#"],
     "year": 2022,
     "featured": "Unity / Games"
