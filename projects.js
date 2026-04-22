@@ -90,6 +90,16 @@ PROJECTS = [
     "featured": "GPU Programming / Computer Graphics"
   },
   {
+    "name": "Blocky Torus World",
+    "category": "Unity Games + Projects",
+    "description": "A blocky game played on a torus planet.",
+    "image": "images/torus_world.gif",
+    "link": "https://github.com/bart1259/BlockyTorusWorld",
+    "technologies": ["Unity", "C#"],
+    "year": 2026,
+    "featured": "Unity / Games"
+  },
+  {
     "name": "Planetary Delivery",
     "category": "Unity Games + Projects",
     "description": "Drive around a planet picking up and delivering packages within a time limit.",
