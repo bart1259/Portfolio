@@ -10,6 +10,16 @@ PROJECTS = [
     "featured": "Machine Learning & AI"
   },
   {
+    "name": "Mechanistic Interpretability Fruit Poison",
+    "category": "Machine Learning & AI",
+    "description": "A mechanistic interpretability experiment exploring how a small language model learns and represents a hidden backdoor.",
+    "image": "images/fruit_poison.png",
+    "link": "https://github.com/bart1259/MechanisticInterpretabilityFruitPoison",
+    "technologies": ["HF Transformers", "PyTorch", "Python"],
+    "year": 2026,
+    "featured": "Machine Learning & AI"
+  },
+  {
     "name": "City Diffusion",
     "category": "Machine Learning & AI",
     "description": "A project for generating top down city / suburb layouts using DDPM models.",
@@ -115,6 +125,16 @@ PROJECTS = [
     "description": "Tower defense game where platforms and towers are shaped like tetris pieces.",
     "image": "images/tetra_defense.png",
     "link": "https://github.com/bart1259/TetraDefense",
+    "technologies": ["Unity", "C#"],
+    "year": 2026,
+    "featured": "Unity / Games"
+  },
+  {
+    "name": "HueBound",
+    "category": "Unity Games + Projects",
+    "description": "A simple platformer game made for a game jam.",
+    "image": "images/huebound.png",
+    "link": "https://github.com/bart1259/HueBound",
     "technologies": ["Unity", "C#"],
     "year": 2026,
     "featured": "Unity / Games"
