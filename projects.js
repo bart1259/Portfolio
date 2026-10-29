@@ -10,22 +10,22 @@ PROJECTS = [
     "featured": "Machine Learning & AI"
   },
   {
+    "name": "City Diffusion 2",
+    "category": "Machine Learning & AI",
+    "description": "A project for generating and editing stylized top-down city maps with a conditional diffusion model, trained on OpenStreetMap data.",
+    "image": "images/city_diffusion2.gif",
+    "link": "https://github.com/bart1259/CityDiffusion2",
+    "technologies": ["HF Diffusers", "Deep Learning", "Python", "Javascript", "HTML"],
+    "year": 2026,
+    "featured": "Machine Learning & AI"
+  },
+  {
     "name": "Mechanistic Interpretability Fruit Poison",
     "category": "Machine Learning & AI",
     "description": "A mechanistic interpretability experiment exploring how a small language model learns and represents a hidden backdoor.",
     "image": "images/fruit_poison.png",
     "link": "https://github.com/bart1259/MechanisticInterpretabilityFruitPoison",
     "technologies": ["HF Transformers", "PyTorch", "Python"],
-    "year": 2026,
-    "featured": "Machine Learning & AI"
-  },
-  {
-    "name": "City Diffusion 2",
-    "category": "Machine Learning & AI",
-    "description": "A project for generating and editing stylized top-down city maps with a conditional diffusion model, trained on OpenStreetMap data..",
-    "image": "images/city_diffusion2.gif",
-    "link": "https://github.com/bart1259/CityDiffusion2",
-    "technologies": ["HF Diffusers", "Deep Learning", "Python", "Javascript", "HTML"],
     "year": 2026,
     "featured": "Machine Learning & AI"
   },
