@@ -20,11 +20,11 @@ PROJECTS = [
     "featured": "Machine Learning & AI"
   },
   {
-    "name": "City Diffusion",
+    "name": "City Diffusion 2",
     "category": "Machine Learning & AI",
-    "description": "A project for generating top down city / suburb layouts using DDPM models.",
-    "image": "images/city_diffusion.gif",
-    "link": "https://github.com/bart1259/CityDiffusion",
+    "description": "A project for generating and editing stylized top-down city maps with a conditional diffusion model, trained on OpenStreetMap data..",
+    "image": "images/city_diffusion2.gif",
+    "link": "https://github.com/bart1259/CityDiffusion2",
     "technologies": ["HF Diffusers", "Deep Learning", "Python", "Javascript", "HTML"],
     "year": 2026,
     "featured": "Machine Learning & AI"
@@ -180,3 +180,18 @@ PROJECTS = [
     "featured": "Other"
   }
 ]
+
+const BACKGROUNDS = [
+  {
+    image: "images/backgrounds/ringworld.png",
+    title: "Blocky Torus World",
+    annotation: "Screenshot from a Unity demo of a torus world made of blocks",
+    opacity: 0.2
+  },
+  {
+    image: "images/backgrounds/cities.png",
+    title: "Cities",
+    annotation: "Visualization of training data for my City Diffusion project.",
+    opacity: 0.68
+  }
+];
